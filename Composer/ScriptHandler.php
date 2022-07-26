@@ -27,6 +27,7 @@ use Composer\Script\Event;
  */
 class ScriptHandler
 {
+
     /**
      * @param CommandEvent $event
      */
