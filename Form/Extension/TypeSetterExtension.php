@@ -37,7 +37,7 @@ class TypeSetterExtension extends AbstractTypeExtension
     /**
      * {@inheritDoc}
      */
-    public function getExtendedType()
+    public static function getExtendedType(): iterable
     {
         // map old class to new one using LegacyFormHelper
         return LegacyFormHelper::getType('form');

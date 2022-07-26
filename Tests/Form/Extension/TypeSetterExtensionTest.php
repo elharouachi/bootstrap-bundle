@@ -48,6 +48,6 @@ class TypeSetterExtensionTest extends \PHPUnit\Framework\TestCase
     public function testGetExtendedType()
     {
         // map old class to new one using LegacyFormHelper
-        $this->assertEquals(LegacyFormHelper::getType('form'), $this->extension->getExtendedType());
+        $this->assertEquals(LegacyFormHelper::getType('form'), $this->extension::getExtendedType());
     }
 }
