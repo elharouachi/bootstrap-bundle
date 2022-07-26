@@ -50,9 +50,11 @@ class BraincraftedBootstrapExtension extends Extension implements PrependExtensi
             $container,
             new FileLocator(__DIR__.'/../Resources/config')
         );
-        $loader->load('services/form.xml');
-        $loader->load('services/twig.xml');
-        $loader->load('services/session.xml');
+        $loader->load('services.yml');
+
+        if ('test' === $container->getParameter('kernel.environment')) {
+            $loader->load('services_test.yaml');
+        }
 
         if (true === isset($config['customize'])) {
             $container->setParameter('braincrafted_bootstrap.customize', $config['customize']);
