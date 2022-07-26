@@ -49,7 +49,7 @@ class Configuration implements ConfigurationInterface
     /** @var string */
     const DEFAULT_FONTS_DIR = '%kernel.root_dir%/../web/fonts';
 
-    const TREE_BUILDER_NAME = 'bootstrap_bundle';
+    const TREE_BUILDER_NAME = 'braincrafted_bootstrap';
     /**
      * {@inheritDoc}
      */
