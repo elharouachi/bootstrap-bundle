@@ -49,6 +49,7 @@ class Configuration implements ConfigurationInterface
     /** @var string */
     const DEFAULT_FONTS_DIR = '%kernel.root_dir%/../web/fonts';
 
+    const TREE_BUILDER_NAME = 'bootstrap_bundle';
     /**
      * {@inheritDoc}
      */
@@ -59,7 +60,7 @@ class Configuration implements ConfigurationInterface
 
     private function buildConfigTree()
     {
-        $treeBuilder = new TreeBuilder();
+        $treeBuilder = new TreeBuilder(self::TREE_BUILDER_NAME);
         $rootNode = $treeBuilder->root('braincrafted_bootstrap');
 
         $rootNode
