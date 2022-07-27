@@ -34,10 +34,9 @@ class InputGroupButtonExtension extends AbstractTypeExtension
      *
      * @return string The name of the type being extended
      */
-    public function getExtendedType()
+    public static function getExtendedTypes(): iterable
     {
-        // map old class to new one using LegacyFormHelper
-        return LegacyFormHelper::getType('text');
+        return [\Symfony\Component\Form\Extension\Core\Type\TextType::class];
     }
 
     /**
